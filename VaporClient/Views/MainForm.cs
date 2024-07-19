@@ -14,6 +14,8 @@ namespace VaporClient.Views
 {
     public partial class MainForm : Form, IMainView
     {
+        private MainPresenter _presenter;
+
 
         public MainForm()
         {
@@ -75,15 +77,22 @@ namespace VaporClient.Views
 
         public void SetPresenter(MainPresenter presenter)
         {
-
+            _presenter = presenter;
         }
+
         public void DisplayGames(GameCollectionModel games)
         {
-
+            GameList.Items.Clear();
+            foreach(GameModel game in games.Games)
+            {
+                var item = new ListViewItem(new[] { game.Title });
+                GameList.Items.Add(item);
+            }
         }
+
         public void ShowErrorMessage(string message)
         {
-
+            MessageBox.Show(message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }
