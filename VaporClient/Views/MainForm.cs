@@ -7,10 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VaporClient.Presenters;
+using VaporClient.Models;
 
-namespace VaporClient
+namespace VaporClient.Views
 {
-    public partial class MainForm : Form
+    public partial class MainForm : Form, IMainView
     {
 
         public MainForm()
@@ -67,6 +69,19 @@ namespace VaporClient
         }
 
         private void SettingButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        public void SetPresenter(MainPresenter presenter)
+        {
+
+        }
+        public void DisplayGames(GameCollectionModel games)
+        {
+
+        }
+        public void ShowErrorMessage(string message)
         {
 
         }
