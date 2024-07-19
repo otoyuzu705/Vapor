@@ -28,7 +28,7 @@ namespace VaporClient.Services
 
         public async Task<GameCollectionModel> GetGameListAsync()
         {
-            string getAPI = _serverAddress + "/Get";
+            string getAPI = _serverAddress + "/Search";
             try
             {
                 var response = await _httpClient.GetStringAsync(getAPI);
