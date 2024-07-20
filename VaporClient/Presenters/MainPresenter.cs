@@ -34,5 +34,10 @@ namespace VaporClient.Presenters
                 _view.ShowErrorMessage(ex.Message);
             }
         }
+
+        public void RunGame()
+        {
+
+        }
     }
 }
