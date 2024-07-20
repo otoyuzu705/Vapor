@@ -1,4 +1,4 @@
-﻿namespace VaporClient
+﻿namespace VaporClient.Views
 {
     partial class MainForm
     {
