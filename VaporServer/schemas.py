@@ -9,6 +9,7 @@ class GameBase(BaseModel):
     version: str
     author: str
     zip_name: str
+    image_name: str
 
 
 class CreateGame(BaseModel):

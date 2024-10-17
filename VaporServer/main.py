@@ -49,6 +49,7 @@ def db_debug():
     games.version = "0.0.0"
     games.author = "GAME KEN"
     games.zip_name = "sample.zip"
+    games.image_name = "icon.png"
     session.add(games)
     session.commit()
     session.close()
